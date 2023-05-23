@@ -1,18 +1,18 @@
 # YOLOv5 usage in deepstream6.2
 
-#一.环境安装
-##yolov5环境安装
+# 一.环境安装
+## yolov5环境安装
 参考官网:https://github.com/ultralytics/yolov5/tree/v6.0
-##deepstream环境安装
+## deepstream环境安装
 参考官网:https://docs.nvidia.com/metropolis/deepstream/6.0.1/dev-guide/text/DS_Quickstart.html
 
-#二.wts与cfg获得
-##获得wts与cfg
+# 二.wts与cfg获得
+## 获得wts与cfg
 将gen_wts_yoloV5.py复制到yolov5-6.0中，运行此文件，如下图所示：
 
 ![img_3.png](imgs/img_3.png)
 
-##修改wts
+## 修改wts
 通过查看wts有多少行，获得模型层，并在wts文件头行添加数字，如下图所示：
 
 ![img_4.png](imgs/img_4.png)
@@ -22,7 +22,7 @@
 ![img_5.png](imgs/img_5.png)
 
 说明：n与s是291，m是401
-#三.libnvdsinfer_custom_impl_Yolo.so库生成
+# 三.libnvdsinfer_custom_impl_Yolo.so库生成
 在DeepStream-Yolo路径下执行以下命令：
 ```c
 CUDA_VER=11.4 make -C nvdsinfer_custom_impl_Yolo
@@ -35,12 +35,12 @@ CUDA_VER=11.4 make -C nvdsinfer_custom_impl_Yolo
 
 ![img_9.png](imgs/img_9.png)
 
-#四.修改配置文件
+# 四.修改配置文件
 主要修改文件路径，如下图所示：
 
 ![img_10.png](imgs/img_10.png)
 
-#五.运行demo
+# 五.运行demo
 
 ```c
 $cd  /opt/nvidia/deepstream/deepstream-6.2/sources/DeepStream-Yolo
