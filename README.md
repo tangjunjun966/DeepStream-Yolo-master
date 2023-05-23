@@ -9,12 +9,18 @@
 #二.wts与cfg获得
 ##获得wts与cfg
 将gen_wts_yoloV5.py复制到yolov5-6.0中，运行此文件，如下图所示：
+
 ![img_3.png](imgs/img_3.png)
+
 ##修改wts
 通过查看wts有多少行，获得模型层，并在wts文件头行添加数字，如下图所示：
+
 ![img_4.png](imgs/img_4.png)
+
 修改如下：
+
 ![img_5.png](imgs/img_5.png)
+
 说明：n与s是291，m是401
 #三.libnvdsinfer_custom_impl_Yolo.so库生成
 在DeepStream-Yolo路径下执行以下命令：
@@ -22,12 +28,18 @@
 CUDA_VER=11.4 make -C nvdsinfer_custom_impl_Yolo
 ```
 出现如下编译:
+
 ![img_8.png](imgs/img_8.png)
+
 编译成功后会出现libnvdsinfer_custom_impl_Yolo.so，如下图：
+
 ![img_9.png](imgs/img_9.png)
+
 #四.修改配置文件
 主要修改文件路径，如下图所示：
+
 ![img_10.png](imgs/img_10.png)
+
 #五.运行demo
 
 ```c
@@ -36,8 +48,11 @@ $deepstream-app -c deepstream_app_config.txt
 ```
 初次加载模型，需要构建engine转换，时间较长,加载完后会产生engine文件，不删除，下次运行无需编译可快速运行。
 加载好模型会出现*.engine文件,如下所示：
+
 ![img_13.png](imgs/img_13.png)
+
 运行成功会出现如下所示:
+
 ![img_14.png](imgs/img_14.png)
 
 
