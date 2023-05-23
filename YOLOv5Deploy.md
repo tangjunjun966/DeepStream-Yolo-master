@@ -9,10 +9,10 @@
 #二.wts与cfg获得
 ##获得wts与cfg
 将gen_wts_yoloV5.py复制到yolov5-6.0中，运行此文件，如下图所示：
-![img_3.png](img_3.png)
+![imgs/img_3.png](img_3.png)
 ##修改wts
 通过查看wts有多少行，获得模型层，并在wts文件头行添加数字，如下图所示：
-![img_4.png](img_4.png)
+![imgs/img_4.png](img_4.png)
 修改如下：
 ![img_5.png](img_5.png)
 说明：n与s是291，m是401
