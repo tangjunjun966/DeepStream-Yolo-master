@@ -14,7 +14,7 @@
 通过查看wts有多少行，获得模型层，并在wts文件头行添加数字，如下图所示：
 ![imgs/img_4.png](img_4.png)
 修改如下：
-![img_5.png](img_5.png)
+![img_5.png](imgs/img_5.png)
 说明：n与s是291，m是401
 #三.libnvdsinfer_custom_impl_Yolo.so库生成
 在DeepStream-Yolo路径下执行以下命令：
